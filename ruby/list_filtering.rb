@@ -13,6 +13,7 @@ def filter_list(l)
 end
 
 # Alternatives
+
 def filter_list2(l)
   l.select{ |i| i.is_a?(Integer) }
 end
