@@ -1,3 +1,4 @@
+# Bit Counting
 # https://www.codewars.com/kata/526571aae218b8ee490006f4/train/ruby
 
 # Write a function that takes an integer as input, and returns the number of bits that are equal to one

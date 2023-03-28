@@ -1,3 +1,4 @@
+# Sentence Smash
 # https://www.codewars.com/kata/53dc23c68a0c93699800041d/train/ruby
 
 # Write a function that takes an array of words and smashes them together into a sentence and returns the sentence.
@@ -6,7 +7,6 @@
 # Example
 # ['hello', 'world', 'this', 'is', 'great']  =>  'hello world this is great'
 
-# Smash Words
 def smash(words)
   words.join(' ')
 end

@@ -1,3 +1,4 @@
+# Detect Pangram
 # https://www.codewars.com/kata/545cedaa9943f7fe7b000048/train/ruby
 
 # A pangram is a sentence that contains every single letter of the alphabet at least once.

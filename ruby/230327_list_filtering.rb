@@ -1,3 +1,4 @@
+# List Filtering
 # https://www.codewars.com/kata/53dbd5315a3c69eed20002dd/train/ruby
 
 # In this kata you will create a function that takes a list of non-negative integers and strings
