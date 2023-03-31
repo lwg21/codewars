@@ -23,6 +23,7 @@ def who_is_winner(pieces_position_list)
   7.times { grid << [] }
   winner = nil
 
+  # Iterate over list of moves (piece positions)
   pieces_position_list.each do |move|
 
     # Place piece in the grid
@@ -30,17 +31,15 @@ def who_is_winner(pieces_position_list)
     row_index = grid[col_index].size
     grid[col_index] << move[2..-1]
 
-    # Populate the 4 arrays to check for victory
+    # Populate the 4 arrays to check for victory (column, row, diagonals)
     col = grid[col_index]
     row = grid.map { |a| a[row_index]}
     up_diag = []
     down_diag = []
     (-3..3).each do |i|
-      if (0..7).include?(col_index + i) && (0..6).include?(row_index + i) && grid[col_index + i]
-        up_diag << grid[col_index + i][row_index + i]
-      end
-      if (0..7).include?(col_index + i) && (0..6).include?(row_index - i) && grid[col_index + i]
-        down_diag << grid[col_index + i][row_index - i]
+      if (0..7).include?(col_index + i) && grid[col_index + i]
+        up_diag << grid[col_index + i][row_index + i] if (0..6).include?(row_index + i)
+        down_diag << grid[col_index + i][row_index - i] if (0..6).include?(row_index - i)
       end
     end
 
@@ -54,15 +53,5 @@ def who_is_winner(pieces_position_list)
       break
     end
   end
-  grid.each { |c| p c }
   winner || 'Draw'
 end
-
-list1 = ["A_Red", "B_Yellow", "A_Red", "B_Yellow", "A_Red", "B_Yellow", "G_Red", "B_Yellow"]
-who_is_winner(list1)
-
-list2 = ["A_Red", "G_Yellow", "D_Red", "A_Yellow", "F_Red", "D_Yellow", "A_Red", "D_Yellow", "E_Red", "D_Yellow", "B_Red", "D_Yellow", "E_Red", "F_Yellow", "B_Red", "D_Yellow"]
-who_is_winner(list2)
-
-list3 = ["A_Red", "D_Yellow", "D_Red", "A_Yellow", "G_Red", "D_Yellow", "E_Red", "G_Yellow", "C_Red", "E_Yellow", "A_Red", "D_Yellow", "F_Red", "E_Yellow", "C_Red", "B_Yellow", "D_Red", "E_Yellow", "C_Red", "G_Yellow", "B_Red", "E_Yellow", "C_Red", "G_Yellow", "F_Red", "F_Yellow", "C_Red", "C_Yellow"]
-who_is_winner(list3)
