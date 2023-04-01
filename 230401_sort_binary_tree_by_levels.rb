@@ -36,7 +36,6 @@ def tree_by_levels(node)
   row = nil
   if node
     rows << [node]
-
     until row == []
       row = []
       rows.last.each do |n|
