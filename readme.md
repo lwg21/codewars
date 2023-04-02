@@ -1,1 +1,1 @@
-This repository contains the solutions I wrote for Codewars.com katas.
+A backup of my Codewars.com kata solutions, kept for future reference. The files are generated using the `kata_scraper.rb` scraper and the corresponding URL. See also my [codewars profile](https://www.codewars.com/users/lwg21).
