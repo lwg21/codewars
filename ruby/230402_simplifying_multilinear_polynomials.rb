@@ -17,22 +17,18 @@
 # Warning: the string in input can contain arbitrary variables represented by lowercase characters in the english alphabet.
 
 def simplify(poly)
+  # Scan polynome for monomes as [sign, factor, variable]
+  # Clean up data
+  # Sort by size of variable, then lexicographic
+  # Chunk monomes by variable
+  # Sum factors and concatenate to a string
+  # Remove leading + if present
   solution = ''
   poly
-
-    # Scan polynome for monomes as [sign, factor, variable]
     .scan(/([+-])?(\d+)?(\w+)/)
-
-    # Clean up data
     .map { |m| [m[0] || '+', m[1] || '1', m[2].chars.sort.join] }
-
-    # Sort by size of variable, then lexicographic
     .sort_by { |m| [m[2].size, m[2]] }
-
-    # Chunk monomes by variable
     .chunk { |m| m[2] }
-
-    # Sum factors and concatenate to a string
     .each do |c|
       factor = c[1].map { |e| (e[0] + e[1]).to_i }.sum
       next if factor.zero?
@@ -41,7 +37,5 @@ def simplify(poly)
       factor = '-' if factor == -1
       arr += "#{factor}#{c[0]}"
     end
-
-  # Remove leading + if present
   solution[0] == '+' ? solution[1..-1] : solution
 end
