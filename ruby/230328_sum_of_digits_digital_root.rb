@@ -17,7 +17,7 @@ def digital_root(n)
   n
 end
 
-# Alternatives
+# Alternatives by other users
 
 def digital_root2(n)
   n < 10 ? n : digital_root2(n.digits.sum)

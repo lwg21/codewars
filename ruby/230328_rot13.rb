@@ -21,7 +21,7 @@ def rot13(string)
   letters.join
 end
 
-# Alternatives
+# Alternatives by other users
 
 def rot13_alt(string)
   string.tr('A-Za-z', 'N-ZA-Mn-za-m')

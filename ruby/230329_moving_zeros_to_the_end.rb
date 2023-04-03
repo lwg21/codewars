@@ -10,7 +10,7 @@ def moveZeros(arr)
   arr.reject { |e| e == 0 } + Array.new(arr.count(0), 0)
 end
 
-# Alternatives
+# Alternatives by other users
 
 def moveZeros2(arr)
   arr.sort_by { |e| e == 0 ? 1 : 0 }

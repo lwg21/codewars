@@ -26,7 +26,7 @@ def solution(input, markers)
   lines.join("\n")
 end
 
-# Alternatives
+# Alternatives by other users
 
 def solution2(input, markers)
   input.gsub(/\s+[#{markers.join}].*/, '')

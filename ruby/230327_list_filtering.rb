@@ -13,7 +13,7 @@ def filter_list(l)
   l.select { |i| i.class == Integer }
 end
 
-# Alternatives
+# Alternatives by other users
 
 def filter_list2(l)
   l.select{ |i| i.is_a?(Integer) }

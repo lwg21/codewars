@@ -19,7 +19,7 @@ def get_sum(a,b)
   ([a,b].min..[a,b].max).sum
 end
 
-# Alternatives
+# Alternatives by other users
 
 def get_sum2(a,b)
   Range.new(*[a,b].sort).reduce(:+)

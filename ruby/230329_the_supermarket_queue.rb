@@ -29,7 +29,7 @@ def queue_time(customers, n)
   time + (queues.max || 0)
 end
 
-# Alternatives
+# Alternatives by other users
 
 def queue_time2(customers, n)
   arr = Array.new(n, 0)
