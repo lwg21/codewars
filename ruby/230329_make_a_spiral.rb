@@ -77,11 +77,3 @@ def spiralize(size)
   end
   spiral
 end
-
-spiralize(5).each do |row|
-  p row
-end
-
-spiralize(8).each do |row|
-  p row
-end
