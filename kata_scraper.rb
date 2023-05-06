@@ -1,6 +1,10 @@
 require 'watir'
 require 'nokogiri'
 
+# Enable debugging output to file if needed
+# Watir.logger.level = :debug
+# Watir.logger.output = 'watir.log'
+
 # URL language and file format correspondence (to be completed)
 languages = {
   'ruby' => 'rb'
