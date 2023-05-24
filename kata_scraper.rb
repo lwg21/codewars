@@ -7,7 +7,8 @@ require 'nokogiri'
 
 # URL language and file format correspondence (to be completed)
 languages = {
-  'ruby' => 'rb'
+  'ruby' => 'rb',
+  'javascript' => 'js'
 }
 
 # Get URL from command line argument
